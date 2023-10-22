@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar App</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+  <div id="new-calendar" class="jumbotron">
+    <h2>New Event</h2>
+    <input type="text" id="event-name" class="form-control" placeholder="Event Name">
+    <input type="date" id="event-date" class="form-control" placeholder="Event Date">
+    <button id="create-new-event" class="btn btn-primary form-control">Create</button>
+  </div>
+  
+  <div id="calendar">
+    <!-- Calendar events will be displayed here -->
+  </div>
+  
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
