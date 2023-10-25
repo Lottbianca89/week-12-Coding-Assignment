@@ -1,23 +1,76 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Event Crud App  Manager</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calendar</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+          crossorigin="anonymous"/>
 </head>
-<body class="container"></body>
-<div id="new event" class="jumbotron">
-<h2>Calender</h2>
-<input type="text" id="new-item-name" class="form-control">  <br>
-<button id="event-list" class="btn btn-primary form-control">add-new-item</button>
+<body class="container">
+    <div class="container pt-2 pb-5 bg-info-subtle text-center">
+        <h1>My Calendar</h1>
+        <img src="https://thumbs.dreamstime.com/b/calendar-year-english-colorful-vector-horizontal-wall-pocket-calender-template-design-new-week-starts-sunday-213315800.jpg"
+             alt="Calendar Image"
+             class="img-fluid"
+             width="600">
+    </div>
+    <form>
+        <h4>New Event Add Form</h4>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input id="title" class="form-control" placeholder="One Hundred Years of Solitude"/>
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" id="date" class="form-control"/>
+        </div>
+        <button type="button" id="submitEvent" class="btn btn-warning">Submit</button>
+    </form>
+    <form>
+        <h4>Update Event</h4>
+        <div class="mb-3">
+            <label for="updateId" class="form-label">Event ID</label>
+            <input id="updateId" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label for="updateTitle" class="form-label">Event Title</label>
+            <input id="updateTitle" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label for="updateDate" class="form-label">Event Date</label>
+            <input type="date" id="updateDate" class="form-control"/>
+        </div>
+        <button type="button" id="updateEvent" class="btn btn-warning">Update</button>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Delete Event</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Events will be displayed here -->
+        </tbody>
+    </table>
 </div>
-
-<div id="add-new-item">
-  <script src="node_modules/jquery/dist/jquery.js"></script>
-  <script src="index.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-</div>
+<!-- Link to Bootstrap JavaScript and jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+<!-- Link to your JavaScript file -->
+<script src="./index.js"></script>
 </body>
 </html>
-    
